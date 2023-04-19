@@ -8,10 +8,17 @@ import { ListService } from '../../../list/services/list.service';
 
 })
 export class SidebarComponent {
+  _tags: string[]= [];
 
   constructor( private listService : ListService) { }
   get tags (){
-    return this.listService.tagsH;
+    return this._tags = this.listService.tagsH;
   }
+
+  eliminarTa(index: any) {
+    this.listService.eliminarTag(index);
+
+  }
+
 
 }

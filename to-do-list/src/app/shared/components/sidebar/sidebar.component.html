@@ -1,11 +1,14 @@
-<div class="bg-pink border-right p-3" id="sidebar"> 
+<div class="border-right p-3" id="sidebar"> 
     <h3 class="text-light"> To Do List</h3>
     <hr>
 
     <div class="list-group list-reset">
-        <button *ngFor="let tag of tags" class="list-goup-item list-goup-item-action ">
+        <button *ngFor="let tag of tags; let i=index;" class="list-goup-item list-goup-item-action" >
+           <li><input (click)="eliminarTa(i)" class="text-light" type="button" value="Borrar" id="lo"> </li>  
             {{ tag | titlecase}}
         </button>
+        
+     
 
     </div> 
 </div>

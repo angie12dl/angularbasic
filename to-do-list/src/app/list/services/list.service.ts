@@ -15,4 +15,8 @@ export class ListService {
         this._tagsH.unshift(tag); 
         console.log(this._tagsH);
     }
+
+    eliminarTag (index:number){
+        this._tagsH.splice(index, 1);
+    }
 }
